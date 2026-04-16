@@ -3,6 +3,7 @@ import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home'; // <--- Import it here
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 
 // Inside your Routes...
 <Route path="about" element={<About />} />
@@ -16,6 +17,7 @@ function App() {
           {/* This renders Home inside MainLayout's <Outlet /> at the "/" path */}
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

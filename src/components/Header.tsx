@@ -85,14 +85,18 @@ const Header = () => {
             Donate Now
           </Link>
           
-          {/* Mobile Toggle Button */}
-          <button 
-            className="lg:hidden p-2" 
+          {/* Mobile Toggle Button - Guaranteed 3 Lines */}
+            <button 
+            className="lg:hidden group flex flex-col items-end justify-center w-10 h-10 p-2" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <div className={`w-6 h-0.5 mb-1.5 transition-all ${isSolid ? 'bg-slate-900' : 'bg-white'}`}></div>
-            <div className={`w-6 h-0.5 transition-all ${isSolid ? 'bg-slate-900' : 'bg-white'}`}></div>
-          </button>
+            >
+            {/* Line 1 */}
+            <div className={`h-[2px] w-7 mb-1.5 rounded-full transition-all ${isSolid ? 'bg-slate-900' : 'bg-white'}`}></div>
+            {/* Line 2 */}
+            <div className={`h-[2px] w-5 mb-1.5 rounded-full transition-all ${isSolid ? 'bg-slate-900' : 'bg-white'}`}></div>
+            {/* Line 3 */}
+            <div className={`h-[2px] w-7 rounded-full transition-all ${isSolid ? 'bg-slate-900' : 'bg-white'}`}></div>
+            </button>
         </div>
       </nav>
 
