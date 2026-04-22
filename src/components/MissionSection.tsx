@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import HeroImg from "../assets/hero-img.jpeg"
 
 const MissionSection = () => {
   return (
@@ -31,7 +32,7 @@ const MissionSection = () => {
             
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <img 
-                src="https://unsplash.com" 
+                src={HeroImg}
                 alt="Our Work" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -54,7 +55,7 @@ const MissionSection = () => {
 
             <div className="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
               <img 
-                src="https://unsplash.com" 
+                src={HeroImg}
                 alt="Our Story" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
