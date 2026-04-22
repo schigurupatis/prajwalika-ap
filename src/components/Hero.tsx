@@ -6,8 +6,8 @@ import sliderImg1 from "../assets/hero-img.jpeg";
 const slides = [
   {
     image: sliderImg1,
-    title: "WE CAN'T STOP AT ALMOST",
-    desc: "2025 marks a heartbreaking milestone: for the first time this century, child deaths are set to rise. But the world has made incredible progress and we have to keep going."
+    title: "EMPOWERING YOUNG LIVES",
+    desc: "A Letter from M.Ravi Chandra IAS."
   },
   {
     image: "https://unsplash.com", 
@@ -76,7 +76,7 @@ const Hero = () => {
               {/* Button: Squareish with specific yellow bg */}
               <button 
                 onClick={() => navigate('/gallery')}
-                className="bg-[#EBCB00] hover:bg-white text-slate-900 font-bold px-8 py-3 rounded-sm transition-all duration-300 text-sm tracking-wide shadow-lg"
+                className="bg-[#EBCB00] hover:bg-white text-slate-900 font-bold px-8 py-3 rounded-sm transition-all duration-300 text-sm tracking-wide shadow-lg cursor-pointer"
               >
                 Read It Here
               </button>

@@ -33,7 +33,7 @@ const Header = () => {
           
           {/* Logo */}
           <Link to="/" className={`text-2xl font-bold tracking-tighter ${isDarkText ? 'text-slate-900' : 'text-slate-900'}`}>
-            Prajwalika
+            Prajwalika Foundation
           </Link>
 
           {/* Desktop Navigation (Hidden if Search is Open to reduce clutter, optional) */}
