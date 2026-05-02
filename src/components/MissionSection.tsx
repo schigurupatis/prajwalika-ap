@@ -8,10 +8,13 @@ const MissionSection = () => {
         
         {/* Main Heading Section */}
         <div className="text-center mb-20 max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-serif text-slate-800 leading-tight">
+          {/* <h2 className="text-4xl md:text-6xl font-serif text-slate-800 leading-tight">
             Our mission is to create a world where <br />
             <span className="text-blue-600 italic">every person</span> has the opportunity <br />
             to live a <span className="text-blue-600 italic underline decoration-1 underline-offset-8">healthy</span>, productive life.
+          </h2> */}
+          <h2 className="text-4xl md:text-6xl font-serif text-slate-800 leading-tight">
+            Prajwalika is committed to inspiring confidence, supporting talent, and creating a platform where <span className="text-blue-600 italic">every student</span> can realize their full <span className="text-blue-600 italic underline decoration-1 underline-offset-8">potential</span>.
           </h2>
           
           <Link 

@@ -8,14 +8,14 @@ const stories = [
     name: "Dr. Sarah Khan",
     role: "Health Specialist, Hyderabad",
     quote: "The mobile clinics provided by Prajwalika have reduced child mortality in our district by 40% in just two years.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400"
+    image: "https://raw.githubusercontent.com/schigurupatis/prajwalika-ap/refs/heads/main/src/assets/Prathap_Image.jpg"
   },
   {
     id: 2,
     name: "Rajesh Kumar",
     role: "Student, Class of 2023",
     quote: "I never thought college was an option until the scholarship program. Now I'm studying engineering.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400"
+    image: "https://raw.githubusercontent.com/schigurupatis/prajwalika-ap/refs/heads/main/src/assets/Prathap_Image.jpg"
   },
   {
     id: 3,
@@ -29,14 +29,14 @@ const stories = [
     name: "Michael Chang",
     role: "Volunteer Partner",
     quote: "The transparency and dedication of this foundation are unlike any I've seen. Every dollar truly goes to the cause.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400"
+    image: "https://raw.githubusercontent.com/schigurupatis/prajwalika-ap/refs/heads/main/src/assets/Prathap_Image.jpg"
   },
   {
     id: 5,
     name: "Priya Reddy",
     role: "Teacher, Govt School",
     quote: "The new digital library has transformed how my students learn. They are more curious and engaged than ever.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400"
+    image: "https://raw.githubusercontent.com/schigurupatis/prajwalika-ap/refs/heads/main/src/assets/Prathap_Image.jpg"
   },
   // Duplicating specifically to ensure the loop is long enough for all screen sizes
   {
@@ -87,6 +87,7 @@ const ImpactStories = () => {
         ease: "linear",
         duration: 25,
         repeat: Infinity,
+        autoplay: false,
       },
     });
   }, [controls]);
@@ -114,6 +115,7 @@ const ImpactStories = () => {
                 ease: "linear",
                 duration: 25,
                 repeat: Infinity,
+                autoplay: false,
               },
             })
           }
