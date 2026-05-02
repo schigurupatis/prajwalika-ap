@@ -137,16 +137,23 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [activeMenu, isSearchOpen]);
 
+  // 🔁 Toggle Search
+  const toggleSearch = () => {
+    if (isSearchOpen) {
+      setIsSearchOpen(false);
+    } else {
+      setActiveMenu(null);
+      setIsSearchOpen(true);
+    }
+  };
+
+  // 🔁 Toggle Menu
   const toggleMenu = (menu) => {
     setIsSearchOpen(false);
     setActiveMenu(activeMenu === menu ? null : menu);
   };
 
-  const openSearch = () => {
-    setActiveMenu(null);
-    setIsSearchOpen(true);
-  };
-
+  // 🔁 Close everything
   const closeAll = () => {
     setActiveMenu(null);
     setIsSearchOpen(false);
@@ -168,8 +175,14 @@ const Hero = () => {
             <a href="#">Careers</a>
             <a href="#">Press</a>
             <a href="#">FAQs</a>
-            <button onClick={openSearch} className="flex items-center gap-2 hover:text-orange-400">
-              <Search size={16}/> Search
+
+            {/* 🔥 Search Toggle Button */}
+            <button 
+              onClick={toggleSearch}
+              className="flex items-center gap-2 hover:text-orange-400 transition"
+            >
+              {isSearchOpen ? <X size={16}/> : <Search size={16}/>}
+              {isSearchOpen ? 'Close' : 'Search'}
             </button>
           </div>
 
@@ -177,7 +190,7 @@ const Hero = () => {
           <div className="flex items-center px-6 md:px-12 h-20">
             <div className="flex items-center gap-4 mr-12">
               {/* <img src="/logo-icon.png" className="h-10" /> */}
-              Prajwalika <br />Foundation
+              Prajwalika <br /> Foundation
               <div className="h-10 w-[1px] bg-white/40"/>
               <div className="text-orange-400 font-bold leading-none">
                 <span className="text-2xl block">20</span>
@@ -201,41 +214,56 @@ const Hero = () => {
         </div>
 
         {/* 🔥 SEARCH OVERLAY */}
-        <AnimatePresence>
-          {isSearchOpen && (
-            <>
-              {/* Background dim */}
-              <motion.div
-                className="fixed inset-0 bg-black/50 z-[60]"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={closeAll}
-              />
+<AnimatePresence>
+  {isSearchOpen && (
+    <>
+      {/* Background dim */}
+      <motion.div
+        className="fixed inset-0 bg-black/50 z-[60]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={closeAll}
+      />
 
-              {/* Search Box */}
-              <motion.div
-                initial={{ y: -80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -80, opacity: 0 }}
-                className="fixed top-0 left-0 w-full bg-white z-[70] p-6 md:p-10 shadow-xl"
-              >
-                <div className="max-w-6xl mx-auto flex items-center gap-4 border-b pb-4">
-                  <Search className="text-orange-500" />
-                  <input
-                    type="text"
-                    placeholder="Search the site"
-                    className="w-full outline-none text-lg"
-                    autoFocus
-                  />
-                  <button onClick={closeAll} className="p-2 border rounded">
-                    <X />
-                  </button>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
+      {/* Search Panel */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="fixed top-0 left-0 w-full bg-white z-[70] pt-10 pb-8 px-6 md:px-16 shadow-lg"
+      >
+        <div className="max-w-7xl mx-auto relative">
+
+          {/* 🔥 Close Button (top-right like screenshot) */}
+          <button
+  onClick={closeAll}
+  className="absolute right-0 top-0 p-3 border border-gray-300 rounded-lg hover:bg-gray-100 transition"
+>
+  <X size={20} className="text-black" />
+</button>
+
+          {/* 🔥 Search Input Row */}
+          <div className="flex items-center gap-4 border-b border-gray-300 pb-4 mt-6">
+
+            {/* Icon */}
+            <Search className="text-orange-500" size={22} />
+
+            {/* Input */}
+            <input
+              type="text"
+              placeholder="Search the site"
+              autoFocus
+              className="w-full text-lg outline-none placeholder-gray-500"
+            />
+          </div>
+
+        </div>
+      </motion.div>
+    </>
+  )}
+</AnimatePresence>
 
         {/* 🔥 MEGA MENU */}
         <AnimatePresence>
@@ -273,9 +301,12 @@ const Hero = () => {
                     </nav>
                   </div>
 
-                  <button onClick={closeAll} className="p-2 border rounded">
-                    <X />
-                  </button>
+                  <button
+  onClick={closeAll}
+  className="absolute right-8 top-8 p-2 border border-gray-300 rounded-md hover:bg-gray-100 transition h-fit"
+>
+  <X size={18} className="text-black" />
+</button>
                 </div>
               </motion.div>
             </>
@@ -305,9 +336,9 @@ const Hero = () => {
           {slides[current].title}
         </h1>
 
-        <button className="inline-flex items-center gap-3 border-2 border-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-500 transition-all w-fit">
-  <span className="text-sm">→ What we do</span>
-</button>
+        <button className="inline-flex items-center gap-3 border-2 border-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-500 w-fit self-start">
+          → What we do
+        </button>
       </div>
     </section>
   );
