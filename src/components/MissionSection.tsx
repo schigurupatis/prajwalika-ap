@@ -26,55 +26,70 @@ const MissionSection = () => {
         </div>
 
         {/* Two Column Grid */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          
-          {/* Card 1: Our Work */}
-          <Link to="/gallery" className="group relative flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl transition-all duration-300 hover:bg-[#F0F7FF]">
-            {/* Yellow Accent Bar (Visible only on hover) */}
-            <div className="absolute left-0 top-6 bottom-6 w-1.5 bg-[#EBCB00] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-full"></div>
-            
-            <div className="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src={HeroImg}
-                alt="Our Work" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="w-full md:w-1/2 pt-2 pr-4">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Our work</h3>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                We work with partners around the world to tackle big challenges and improve people's lives.
-              </p>
-              <span className="text-sm font-bold border-b-2 border-slate-900 pb-1 group-hover:text-blue-600 group-hover:border-blue-600 transition-all">
-                Learn more about our work
-              </span>
-            </div>
-          </Link>
+        {/* 🔥 MODERN CARDS */}
+<div className="grid md:grid-cols-2 gap-10 lg:gap-14">
 
-          {/* Card 2: Our Story */}
-          <Link to="/about" className="group relative flex flex-col md:flex-row gap-6 items-start p-6 rounded-2xl transition-all duration-300 hover:bg-[#F0F7FF]">
-            {/* Yellow Accent Bar (Visible only on hover) */}
-            <div className="absolute left-0 top-6 bottom-6 w-1.5 bg-[#EBCB00] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-r-full"></div>
+  {/* 🔥 CARD 1 */}
+  <Link
+    to="/gallery"
+    className="group block"
+  >
+    {/* Image */}
+    <div className="overflow-hidden rounded-2xl">
+      <img
+        src={HeroImg}
+        alt="Our Work"
+        className="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+    </div>
 
-            <div className="w-full md:w-1/2 aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-              <img 
-                src={HeroImg}
-                alt="Our Story" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-            <div className="w-full md:w-1/2 pt-2 pr-4">
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Our story</h3>
-              <p className="text-slate-600 text-sm leading-relaxed mb-4">
-                For over 15 years, the Prajwalika Foundation has been committed to tackling inequities.
-              </p>
-              <span className="text-sm font-bold border-b-2 border-slate-900 pb-1 group-hover:text-blue-600 group-hover:border-blue-600 transition-all">
-                Explore our story
-              </span>
-            </div>
-          </Link>
+    {/* Content */}
+    <div className="mt-6">
+      <h3 className="text-2xl font-semibold text-slate-900 mb-2">
+        Our Work
+      </h3>
 
-        </div>
+      <p className="text-slate-600 text-sm leading-relaxed mb-4 max-w-md">
+        We work with partners to create opportunities and improve student outcomes through meaningful programs.
+      </p>
+
+      <span className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-slate-900 border border-slate-300 rounded-md transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900">
+  Explore work →
+</span>
+    </div>
+  </Link>
+
+  {/* 🔥 CARD 2 */}
+  <Link
+    to="/about"
+    className="group block"
+  >
+    {/* Image */}
+    <div className="overflow-hidden rounded-2xl">
+      <img
+        src={HeroImg}
+        alt="Our Story"
+        className="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+    </div>
+
+    {/* Content */}
+    <div className="mt-6">
+      <h3 className="text-2xl font-semibold text-slate-900 mb-2">
+        Our Story
+      </h3>
+
+      <p className="text-slate-600 text-sm leading-relaxed mb-4 max-w-md">
+        A journey of empowering students and building impact through education over the years.
+      </p>
+
+      <span className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-slate-900 border border-slate-300 rounded-md transition-all duration-300 hover:bg-slate-900 hover:text-white hover:border-slate-900">
+  Read Story →
+</span>
+    </div>
+  </Link>
+
+</div>
       </div>
     </section>
   );
