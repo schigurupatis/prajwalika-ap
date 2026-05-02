@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import sliderImg1 from "../assets/hero-img.jpeg";
-import HeadetBg from "../assets/headebg.jpg"
+// import HeadetBg from "../assets/headebg.jpg"
 
 const slides = [
   {

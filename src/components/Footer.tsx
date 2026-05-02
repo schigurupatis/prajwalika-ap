@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom';
 // Standard icons usually work fine
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 // Import the "icons" object as a fallback for brand icons
-import * as icons from 'lucide-react';
+// import * as icons from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   // Helper to safely get brand icons or a fallback circle
-  const BrandIcon = ({ name, size = 20 }) => {
-    const Icon = icons[name] || icons['Circle']; 
-    return <Icon size={size} />;
-  };
+  // const BrandIcon = ({ name, size = 20 }) => {
+  //   const Icon = icons[name] || icons['Circle']; 
+  //   return <Icon size={size} />;
+  // };
 
   return (
     <footer className="bg-[#0F172A] text-slate-400 pt-16 pb-8">
@@ -48,13 +48,13 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
-                <BrandIcon name="Facebook" />
+                {/* <BrandIcon name="Facebook" /> */}
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
-                <BrandIcon name="Twitter" />
+                {/* <BrandIcon name="Twitter" /> */}
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all">
-                <BrandIcon name="Instagram" />
+                {/* <BrandIcon name="Instagram" /> */}
               </a>
             </div>
           </div>
