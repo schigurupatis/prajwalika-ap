@@ -125,7 +125,7 @@ const slides = [
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
-  const [activeMenu, setActiveMenu] = useState(null);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
@@ -148,7 +148,7 @@ const Hero = () => {
   };
 
   // 🔁 Toggle Menu
-  const toggleMenu = (menu) => {
+  const toggleMenu = (menu: string) => {
     setIsSearchOpen(false);
     setActiveMenu(activeMenu === menu ? null : menu);
   };
