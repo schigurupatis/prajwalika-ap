@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import sliderImg1 from "../assets/hero-img.jpeg";
+import HeadetBg from "../assets/headebg.jpg"
 
 const slides = [
   {
@@ -29,6 +30,7 @@ const Hero = () => {
 
   return (
     <section className="elative w-full h-screen bg-[#EBCB00] pt-24 pb-8 pl-4 pr-4 md:pl-12 md:pr-12 flex flex-col overflow-hidden">
+    {/* <section className="elative w-full h-screen pt-24 pb-8 pl-4 pr-4 md:pl-12 md:pr-12 flex flex-col overflow-hidden header-bg-img" style={{backgroundImage: "HeadetBg"}}> */}
       {/* The "Gated" Container: Rounded ONLY on the left side */}
       <div className="relative flex-grow w-full overflow-hidden rounded-[40px] md:rounded-[100px] shadow-2xl bg-slate-900">
         

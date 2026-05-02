@@ -1,5 +1,6 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import UserImg from "../assets/Prathap_Image.jpg"
 
 const stories = [
   {
@@ -7,14 +8,14 @@ const stories = [
     name: "Dr. Sarah Khan",
     role: "Health Specialist, Hyderabad",
     quote: "The mobile clinics provided by Prajwalika have reduced child mortality in our district by 40% in just two years.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400"
+    image: {UserImg}
   },
   {
     id: 2,
     name: "Rajesh Kumar",
     role: "Student, Class of 2023",
     quote: "I never thought college was an option until the scholarship program. Now I'm studying engineering.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400"
+    image: {UserImg}
   },
   {
     id: 3,
